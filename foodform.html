@@ -1,0 +1,52 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food donate
+    </title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="foodform.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body class="main-container">
+	<form action="foodform.php" method="post" name="myform" onsubmit="return validate()">
+	<div class="form-card mt-5">
+        <p><b>Fill this form, our team will collect your <span>Donation</span> or <span>Wastage</span> from your place.</p></b>
+		<input type="text" name="name" placeholder="Your Name" class="input-field text-center" required>
+		<select name="donation" id="donation" class="input-field text-center">
+			<option value="wet food" class="text-center">Wet Food</option>
+			<option value="donatable food" class="text-center">donatable food</option>
+		</select>
+		<input type="text"  placeholder="Address" name="Address" class="input-field text-center">
+		<label for="Preserved" class="mt-3">Preserved:</label>
+		<div>
+		    <input type="radio" value="can be preserved for more than 1 day" name="preserve" class="radio-btn">can be preserved for more than 1 day<br>
+		    <input type="radio" value="Donate Immediately" name="preserve" class="radio-btn">Donate Immediately<br>
+		</div>
+	       <a href="#"><button type="submit" class="submit-btn">Submit Details</button></a>
+	</div>
+	</form>
+<script>
+function validate(){
+	
+	var Address=document.myform.Address.value;
+	if(Address==""){
+		alert("Please Enter Address");
+		return false;
+	}
+	else{
+		alert("Details Submitted Successfully");
+	}
+}
+</script>
+</body>
+</html>

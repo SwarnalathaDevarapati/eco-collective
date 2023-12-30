@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Eco Collective</title>
+	<link rel="stylesheet" type="text/css" href="book_form.css">
+
+	<link rel="icon" href="/../1.png" > 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body class="main-container">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-6">
+				<div class="first-part-bg"></div>
+			</div>
+				<div class="col-6">
+					<h1 class="text-center text-white mt-5">Form For individuals</h1>
+					<h6 class="text-center text-white">Note : Books weight sholud be above 1 kg</h6>
+					<div class="form-card">
+						<form action="book_form.php" method="post" name="myform" onsubmit="return validate()">
+						<input type="text" name="name" placeholder="Enter Name" class="input-field" required>
+						<input type="tel" name="phone_no" placeholder="Enter Phone Number" class="input-field">
+						<textarea type="text" name="Address" placeholder="Enter Address" class="input-field"></textarea>
+						<input type="tel" name="weight" placeholder="Enter weight(in KGs)" class="input-field">
+						<p class="text-white text-center mt-4">Choose Book Type</p>
+						<div class="text-center">
+							<input type="radio" name="book_type" value="hard_Cover" class="radio-btn"><label class="text-white">Hard Cover</label>
+						</div>
+						<div class="text-center">
+							<input type="radio" name="book_type" value="hard_Cover" class="radio-btn"><label class="text-white mb-2">Soft Cover</label>
+						</div>
+						<center><button type="submit" class="submit-btn">Submit</button></center>
+				</form>
+					</div>
+					<h6 class="text-center text-white">Note : Money Credits Depends Up On Your Type Of Donation</h6>
+				</div>
+		</div>
+	</div>
+<script>
+function validate(){
+
+	var mobile=document.myform.phone_no.value;
+	if(mobile==="" || mobile.length!=10 || !(mobile.match(/[6-9][0-9]{9}/))){
+		alert("please enter valid number");
+		return false;
+	}
+
+	var Address=document.myform.Address.value;
+	if(Address==""){
+		alert("Please Enter Address");
+		return false;
+	}
+	
+	
+	var weight=document.myform.weight.value;
+	if(weight<1){
+		alert("Weight Should be More than 1 kg");
+		return false;
+	}
+	else{
+		alert("Details Submitted Successfully");
+	}
+}
+</script>
+</body>
+</html>

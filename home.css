@@ -1,0 +1,83 @@
+
+body{
+	background-color: #222;
+	margin: 0px;
+}
+
+.navigation-bar{
+	background-image: linear-gradient(to right,#31f083,#18ed6a,#78bb17);
+}
+
+#logo-image{
+	height: 50px;
+	width: 80px;
+}
+
+#title{
+	font-weight: bold;
+	font-family: verdana;
+	font-size: 30px;
+	color: #222222;
+}
+
+.hero-section{
+	width: 100%;
+	height: 100vh;
+	background: url('https://i.gifer.com/Orb.gif'),linear-gradient(rgba(60, 60, 60, 0.5),rgba(25, 0, 15, 0.5));
+	background-size: cover;
+	background-blend-mode: overlay;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.hero-section-heading{
+	font-size: 65px;
+	font-weight: bold;
+	color: #ffffff;
+	font-family: serif;
+}
+
+.hero-section-description{
+	font-size: 25px;
+	color: #ffffff;
+	font-family: fantasy;
+}
+
+.start-now-btn{
+	height: 50px;
+	width: 130px;
+	background: linear-gradient(#09b083,#4393b5);
+	border: 1px solid ;
+	border-radius: 15px;
+	font-weight: bold;
+	color: #fff;
+}
+
+.start-now-btn:hover{
+	float: left;
+	width: 160px;
+
+	border-radius: 30px;
+	box-shadow: 4px 4px black;
+	color: #222;
+}
+
+.mission-image{
+	height: 200px;
+	width: 200px;
+	border-radius: 30px;
+	margin-bottom: 50px;
+	margin: 4px;
+}
+
+
+#footer-section{
+	background: transparent;
+	display: flex;
+	justify-content: space-around;
+	height: 35px;
+	display: flex;
+	align-items: center;
+}

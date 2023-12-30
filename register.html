@@ -1,0 +1,103 @@
+<html>
+<head>
+<title>Register</title>
+<link rel="stylesheet" href="register.css">
+</head>
+<body>
+<div class="hero">
+<div class="form-box">
+<div class="button-box">
+<div id="btn"></div>
+ <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+ <button type="button" class="toggle-btn" onclick="register()">SignUp</button>
+</div>
+<div class="social-icons">
+ <center>
+ <img src="face.png" alt="Girl in a jacket" width="30" height="30"> 
+<img src="insta.png" alt="Girl in a jacket" width="30" height="30"> 
+<img src="twi.png" alt="Girl in a jacket" width="30" height="30"> 
+</center>
+</div>
+<form  id="login" action="logincheck.php" method="post" onsubmit="return verify()" name="form" class="input-group">
+    <input type="text" class="input-field" name="mailId" placeholder="Email id">
+    <input type="password" class="input-field" name="password" placeholder="Enter password" >
+    <button type="submit" class="submit-btn">Log IN</button>
+   </form>
+  <form  id="register" action="signup.php" method="post" onsubmit="return validate()" name="myform" class="input-group">
+    <input type="email" class="input-field" name="email" placeholder="Email id">
+     <input type="password" class="input-field" name="pass" placeholder="Enter Password">
+     <input type="password" class="input-field" name="pwd" placeholder="Confirm password"> 
+    <br><br>
+    <button type="submit" name="save" id="submit" class="submit-btn">SignUp</button>
+   </form>
+</div>
+
+
+
+</div>
+<script>
+  var x = document.getElementById("login");
+  var  y = document.getElementById("register");
+  var z = document.getElementById("btn");
+
+ function register(){
+    x.style.left = "-400px";
+     y.style.left = "50px";
+     z.style.left = "110px";
+}   
+ function login(){
+    x.style.left = "50px";
+     y.style.left = "450px";
+     z.style.left = "0px";
+
+}
+function validate(){
+	var email=document.myform.email.value;
+	if(email==="" || !(email.match(/[a-z A-Z 0-9 \. _ -]+[@][a-z A-Z 0-9 _ -]+[\.][a-z]{2,3}/))){
+		alert("please enter valid email address");
+		return false;
+	}
+	var password=document.myform.pass.value;
+	var cpassword=document.myform.pwd.value;
+	if(password.length<6){	
+		alert("password must contain 6 characters");	
+		return false;
+	}
+	else if(password!=cpassword){
+		alert("password must equal to confirm password");
+		return false;
+	}
+	if(email!="" && password!="" && cpassword!=""){
+		alert("Successfully Signed In");
+	}
+	
+	/*var mobile=document.myform.mobile.value;
+	if(mobile==="" || mobile.length!=10 || !(mobile.match(/[6-9][0-9]{9}/))){
+		alert("please enter valid number");
+		return false;
+	}*/
+}
+
+function verify(){
+	var mailId=document.form.mailId.value;
+	if(mailId.length<=12){
+		alert("Wrong email or password");
+	}
+
+	var password=document.form.password.value;
+	if(password.length<6){
+		alert("Wrong email or password");
+	}
+
+	if(mailId.length<=12 && password.length<6){
+		alert("Login Failed");
+	}
+	else{
+		alert("Logged In Successfully");
+	}
+}
+
+
+</script>
+</body>
+</html>

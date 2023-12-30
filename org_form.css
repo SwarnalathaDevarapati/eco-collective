@@ -1,0 +1,109 @@
+*{
+	margin: 0px;
+	padding: 0px;
+
+}
+.main-bg{
+	background: url('https://cdn.vox-cdn.com/thumbor/5qtAXr1UQRLyrmplsOBzKsPhfpI=/0x0:1800x1013/1200x675/filters:focal(756x363:1044x651):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/63377661/dissolving_plastics.0.gif');
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	padding:40px;
+}
+
+.note{
+	text-align: center;
+	color: white;
+	margin-top: px;
+}
+
+.form-card{
+	height: 500px;
+	width: 100%;
+	box-shadow: 20px 20px 20px 20px #5c5c5c;
+	background: rgba(222, 224, 227,0.3),transparent;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50px;
+}
+
+.input-field{
+	width: 500px;
+	height: 40px;
+	border-radius: 20px;
+	background: rgba(190, 191, 194, 0.6);
+	color: #fff;
+	margin: 5px;
+	border: 0px;
+	box-shadow: 3px 3px 3px 3px black;
+}
+
+.input-field:hover{
+	width: 550px;
+	float: right;
+	background: blueviolet;
+}
+
+::placeholder{
+	color: white;
+	text-align: center;
+}
+
+.submit-btn{
+	width: 200px;
+	height: 35px;
+	margin-top: 20px;
+	border: 1px solid;
+	border-radius: 25px;
+	box-shadow: 3px 3px black;
+	background: rgba(71, 71, 71, 0.6);
+	color: white;
+}
+.submit-btn:hover{
+	float: left;
+	width: 250px;
+	height: 30px;
+	background: blueviolet;
+}
+
+@media(orientation:portrait) and (max-width:600px){
+	.main-bg{
+		background: url('https://gifdb.com/images/high/sage-green-recycle-bin-miv4dnagiz3u4wi1.gif');
+		height: 100vh;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+	
+
+	.input-field{
+	width: 200px;
+	height: 40px;
+	border-radius: 20px;
+	background: rgba(190, 191, 194, 0.6);
+	color: #fff;
+	margin: 5px;
+	border: 0px;
+	box-shadow: 3px 3px 3px 3px black;
+	}
+
+	.input-field:hover{
+	width: 200px;
+	float: right;
+	}
+
+}
+
+@media(orientation:landscape) and (max-width:800px){
+	.main-bg{
+		background: url('https://i.pinimg.com/originals/88/2b/b9/882bb9bc864025d05b546f6c575c529b.gif');
+		height: 100vh;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+}
+

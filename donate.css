@@ -1,0 +1,93 @@
+*{
+	margin: 0px;
+}
+
+.bg{
+	background: url('https://images.squarespace-cdn.com/content/v1/51914086e4b0536c559f8743/c3ed9fb1-ba18-4fb0-985b-6a516eeee5ac/ON-CY045_201904_NS_20190328161523.gif');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+}
+
+.donate-heading{
+	margin-top: 100px;
+	text-align: center;
+	font-weight: bolder;
+}
+
+.donate-sub-heading{
+	text-align: center;
+	font-weight: bolder;
+}
+
+.top-donate-card{
+	height: 300px;
+	width: 300px;
+	background: transparent;
+	margin-top: 50px;
+	margin-left: 60px;
+	border-radius: 30px;
+	text-align: center;
+	box-shadow: 20px 20px 20px 20px black;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-style: oblique;
+	color: #222;
+	font-weight: bold;
+}
+
+.top-donate-card:hover{
+	float: left;
+	height: 350px;
+	width: 330px;
+	font-size: 20px;
+}
+
+.non-profit-heading{
+	margin: 80px;
+	font-weight: bolder;
+	text-align: center;
+}
+
+.bottom-donate-card{
+	height: 300px;
+	width: 350px;
+	background: transparent;
+	margin-left: 100px;
+	margin-bottom: 40px;
+	border-radius: 30px;
+	box-shadow: 20px 20px 20px 20px;
+	text-align: center;
+	box-shadow: 20px 20px 20px 20px black;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-style: oblique;
+	color: #222;
+	font-weight: bold;
+}
+
+.bottom-donate-card:hover{
+	float: left;
+	height: 330px;
+	width: 380px;
+}
+
+.card-heading{
+	font-weight: bolder;
+	font-style: oblique;
+}
+
+.donate-btn{
+	border-radius: 25px;
+	width: 150px;
+	height: 40px;
+	border-width: 0px;
+	background: #222;
+	color: #fff;
+	text-decoration: none;
+}

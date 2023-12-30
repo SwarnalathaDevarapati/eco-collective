@@ -1,0 +1,78 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+.main-container{
+	background: radial-gradient(#593b73,#8a70a1);
+}
+
+.first-part-bg{
+	background: url('https://i.gifer.com/origin/aa/aa5165eb495c25971190bbaf72ad38fb_w200.gif');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+}
+
+.form-card{
+	height: 400px;
+	width: 500px;
+	background: transparent;
+	margin: 50px;
+	margin-top: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	box-shadow: 4px 4px 10px 10px;
+	border-radius: 35px;
+}
+
+.input-field{
+	width: 400px;	
+	height: 40px;
+	border-radius: 15px;
+	background: transparent;
+	border: 0px;
+	box-shadow: 4px 4px 4px 4px grey;
+	margin: 5px;
+	color: #fff;
+}
+
+.input-field:hover{
+	width: 450px;
+	float: right;
+	background: #545354;
+}
+
+::placeholder{
+	color: #fff;
+	text-align: center;
+}
+
+.radio-btn{
+	height: 15px;
+	width: 	15px;
+	color: #fff;
+	margin: 5px;
+}
+
+.submit-btn{
+	width: 200px;
+	height: 35px;
+	margin-top: 20px;
+	border: 1px solid;
+	border-radius: 25px;
+	box-shadow: 3px 3px black;
+	background: rgba(71, 71, 71, 0.6);
+	color: white;
+}
+
+.submit-btn:hover{
+	float: left;
+	width: 250px;
+	height: 40px;
+	background: #545354;
+}

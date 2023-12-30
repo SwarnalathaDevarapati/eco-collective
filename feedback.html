@@ -1,0 +1,100 @@
+<HTML>
+  <HEAD>
+    <TITLE>Feedback Form</TITLE>
+<style>
+.form-card{
+	height: 400px;
+	width: 800px;
+	background: transparent;
+	margin: 50px;
+	margin-top: 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	box-shadow: 4px 4px 10px 10px;
+	border-radius: 35px;
+}
+
+.input-field{
+	width: 400px;	
+	height: 40px;
+	border-radius: 15px;
+	background: transparent;
+	border: 0px;
+	box-shadow: 4px 4px 4px 4px grey;
+	margin: 5px;
+	color: #fff;
+}
+
+.comment{
+	width: 400px;	
+	height: 100px;
+	border-radius: 15px;
+	background: transparent;
+	border: 0px;
+	box-shadow: 4px 4px 4px 4px grey;
+	margin: 5px;
+	color: #fff;
+}
+::placeholder{
+	color:#fff;
+	text-align:center;
+}
+.submit-btn{
+	width: 150px;
+	height: 35px;
+	margin-top: 20px;
+	border: 1px solid;
+	border-radius: 25px;
+	box-shadow: 3px 3px black;
+	background: rgba(71, 71, 71, 0.6);
+	color: white;
+}
+</style>
+  </HEAD>
+  <BODY style="background:blueviolet;">
+    <center><H1>Feedback Form</H1></center>
+    <center><div class="form-card">
+	<FORM action="feedback.php" method="post" name="myform" onsubmit="return validate()">
+      Full Name : <INPUT type="text" class="input-field" name="fullname" placeholder="Enter Fullname here"><br>
+      <BR>
+      <BR>
+      <!--This uses the new HTML "email" INPUT type which will automatically validates the email address when the SUBMIT button is clicked-->
+      email: <INPUT type="email" class="input-field" name="mail" placeholder="e-mail address">
+      <BR>
+      <BR>
+        Comment :<BR>        
+        <TEXTAREA rows="6" cols="50" class="comment" name="commentfield" placeholder="Give Your Feedback"></TEXTAREA><br><br>
+        <div>
+		<INPUT TYPE="submit" class="submit-btn" value="Send Feedback">
+        	<INPUT TYPE="reset" class="submit-btn" value="Reset">
+	</div>
+    </FORM>
+<div></center>
+    
+<script>
+function validate(){
+	var name=document.myform.fullname.value;
+	if(name==""){
+		alert("Enter your Name");
+		return false;
+	}
+	var mail=document.myform.mail.value;
+	if(mail==="" || !(mail.match(/[a-z A-Z 0-9 \. _ -]+[@][a-z A-Z 0-9 _ -]+[\.][a-z]{2,3}/))){
+		alert("please enter valid email address");
+		return false;
+	}
+	var commentfield=document.myform.commentfield.value;
+	if(commentfield==""){
+		alert("Please Give Feedback");
+		return false;
+	}
+	else{
+		alert("Thanks For Your Feedback");
+	}
+}
+</script>
+  </BODY>  
+</HTML>
